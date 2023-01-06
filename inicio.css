@@ -335,7 +335,9 @@ nav ul li button:hover{
     font-size: 1rem;
 }
 
-
+.work-container{
+    display: flex;
+}
 .work-image{
     display: flex;
     align-items: center;
@@ -346,9 +348,9 @@ nav ul li button:hover{
 
 .image{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     border: 2px solid var(--color7);
     border-radius: 15px;
     text-align: center;
@@ -358,7 +360,6 @@ nav ul li button:hover{
     width: 100%;
     height: 100%;
     vertical-align: top;
-    box-sizing: border-box;
     margin: 0 1%;
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -593,70 +594,70 @@ footer{
    
 
 
+
+
+
+    .about-title{
+        margin-top: 2rem;
+
+    }
+
+
+    /*------------------------------*/
+    /*----------- ABOUT -----------*/
+    /*------------------------------*/
+
+    .about{
+        font-size: 15px;
+    }
+
+    /*------------------------------*/
+    /*----------- ASI TRABAJAMOS -----------*/
+    /*------------------------------*/
+    .work-title h2{
+        font-size: 2rem;
+    }
+
+    .work-p p{
+        font-size: 15px;
+    }
+
+    .work-image{
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .image:hover{
+        background: var(--color6);
+        transform: scale(1.05);
+    }
+
+    .contact{
+        flex-direction: column;
+    }
+
+    .contenerdor{
+        flex-direction: column;
+    }
+
+    .contacto-title{
+        font-size: 2rem;
+    }
+
+    .contacto{
+        width: 100%;
+    }
+
+    .google-map{
+        margin-top: 2em;
+        width: 100%;
+    }
+
+    .google-map iframe{
+        width: 96%;
+        margin: 0 10px;
+    }
 }
-
-
-.about-title{
-    margin-top: 2rem;
-
-}
-
-
-  /*------------------------------*/
-/*----------- ABOUT -----------*/
-/*------------------------------*/
-
-.about{
-    font-size: 15px;
-}
-
-  /*------------------------------*/
-/*----------- ASI TRABAJAMOS -----------*/
-/*------------------------------*/
-.work-title h2{
-    font-size: 2rem;
-}
-
-.work-p p{
-    font-size: 15px;
-}
-
-.work-image{
-    flex-direction: column;
-    font-size: 15px;
-}
-
-.image:hover{
-    background: var(--color6);
-    transform: scale(1.05);
-}
-
-.contact{
-    flex-direction: column;
-}
-
-.contenerdor{
-    flex-direction: column;
-}
-
-.contacto-title{
-    font-size: 2rem;
-}
-
-.contacto{
-    width: 100%;
-}
-
-.google-map{
-    margin-top: 2em;
-    width: 100%;
-}
-
-.google-map iframe{
-    width: 96%;
-    margin: 0 10px;
-}
-
 
 
 
