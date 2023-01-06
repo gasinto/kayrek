@@ -7,6 +7,7 @@
     --color6: #383254;
     --color7: #fafafa;
 }
+
 @font-face {
     font-family: martin;
     src: url(./Fuentes/MARTIN/Martian_Mono/MartianMono-VariableFont_wdth\,wght.ttf);
@@ -20,14 +21,12 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 100;
-}
+
 
 /**---whatsapp icono flotante---**/
 .whatsapp-float{
@@ -63,25 +62,27 @@ body{
 }
 
 
-/*-----HEADER-----*/
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
+/*------------------------------*/
+/*----------- HEADER -----------*/
+/*------------------------------*/
+
+
+nav{
+    position: fixed;
+    background: rgba(23,13,52,.8);
     height: 80px;
     width: 100%;
-    z-index: 99;
-    background-color: rgba(23,13,52,.8);
-    flex-wrap: wrap;
-    font-size: .8em;
-} 
-
-
-.header-left{
-    display: flex;
-    margin-left: 1em;    
+    font-family: roboto;
+    z-index: 100;
 }
+
+.logo{
+    position: absolute;
+    padding: 20px 50px;
+    display: flex;
+    
+}
+
 .kay{
     color: var(--color1);
     font-size: 2em;
@@ -101,66 +102,72 @@ header{
     font-weight: 900;
 }
 
-.header-center a{
-    margin-right: 1em;
-    text-decoration: none;
+nav ul{ 
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
     color: var(--color7);
-    font-family: roboto;
-    font-weight: 900;
-    font-size: 1.2em;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
 }
 
-.header-center a:hover{
-    cursor: pointer;
-    color: var(--color3);
-    border-bottom: solid;
-    padding-bottom: 8px;
+.active, nav ul li a:hover{
+    background: var(--color3);
 }
 
-.header-right{
-    margin-right: 1em;
-    
-}
 
-.header-right a{
-    width: 100%;
-    margin-right: 1em;
-    text-decoration: none;
-    text-decoration: none;
+
+.checkbtn{
+    font-size: 30px;
     color: var(--color7);
-    font-family: roboto;
-    font-weight: 900;
-    font-size: 1.2em;
-}
-
-.header-right a:hover{
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
-    color: var(--color3);
-    border-bottom: solid;
-    padding-bottom: 8px;
-}
-
-.header-right button{
-    background: rgb(54,35,111);
-    background: linear-gradient(0deg, rgba(54,35,111,1) 7%, rgba(129,71,240,1) 41%);
-    color: var(--color7);
-    padding: 0.4rem;
-    border-radius: 10px ;
-}
-
-.header-right button:hover{
-    cursor: pointer;
-    border: 1px solid var(--color7);
-}
-
-.icon-menu{
     display: none;
 }
 
-/*slider*/
+#check{
+    display: none;
+}
+
+nav ul li button{
+    width: 8rem;
+    height: 2.2rem;
+    vertical-align: middle;
+    background-color: var(--color3);
+    border-radius: 15px;
+    border: none;
+    color: var(--color7);
+}
+
+.btn-header{
+    margin-left: 1em;
+}
+
+nav ul li button:hover{
+    cursor: pointer;
+    background-color: var(--color7);
+    color: var(--color3);
+    border: 2px solid var(--color3);
+}
+
+/*------------------------------*/
+/*----------- SLIDER -----------*/
+/*------------------------------*/
 
 .slider{
     width: 100vw;
+    height: calc(100vh - 80px);
     margin: auto;
     overflow: hidden;
     background: rgb(129,71,240);
@@ -197,7 +204,7 @@ header{
     top: 30%;
     left: 50%;
     width: 50%;
-    transform:translate(-50%,-30%);
+    transform:translate(-50%,-10%);
     width: 80%;
     background-color: rgba(145, 36, 212, .5);
     color: var(--color7);
@@ -211,7 +218,7 @@ header{
 
 .slider ul li img{
     width: 100%;
-    height: 30em;
+    height: calc(100vh - 80px);
 }
 
 
@@ -262,43 +269,54 @@ header{
     70%{opacity: 1;}
 }
 
-/**---ABOUT---**/
+
+
+/*------------------------------*/
+/*----------- ABOUT -----------*/
+/*------------------------------*/
 
 .about{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 10em;
-    height: 25em;
-    width: 100%;
+    align-items: center;
+    font-family: martin;
+    padding: 1em;
+    width: 100vw;
     background: rgb(129,71,240);
     background: linear-gradient(0deg, rgba(129,71,240,1) 13%, rgba(23,13,52,1) 61%, rgba(54,35,111,1) 98%);
 }
 .about-title{
     color: var(--color7);
+
 }
 
 .about-title h2{
-    font-size: 3em;
+    font-size: 2em;
+    margin: 2em 0 .5em 0;
 }
 
 .description{
     color: var(--color7);
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1em;
     margin-top: 5px;
     line-height: 1.3em;
 }
 
-/**---ASI TRABAJAMOS---**/
+
+/*------------------------------*/
+/*----------- ASI TRABAJAMOS -----------*/
+/*------------------------------*/
 
 .work{
-    padding: 2em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: martin;
+    line-height: 1.3em;
     background: rgb(129,71,240);
     background: linear-gradient(180deg, rgba(129,71,240,1) 25%, rgba(54,35,111,1) 100%);
 }
@@ -309,11 +327,12 @@ header{
 }
 .work-title h2{
     font-size: 3rem;
+    margin: 2em 0 .5em 0;
 }
 .work-p p{
     color: var(--color7);
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 
@@ -360,23 +379,37 @@ header{
     width: 80%;
 }
 
-/**--------------CONTACTO--------------**/
-.contact{
+/*------------------------------*/
+/*-----------   contacto -----------*/
+/*------------------------------*/
+.contacto-container{
     display: flex; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 10px;
     width: 100%;
     background: rgb(129,71,240);
     background: linear-gradient(0deg, rgba(129,71,240,1) 25%, rgba(54,35,111,1) 100%);
 }
 
+.contenerdor{
+    display: flex;
+    width: 100%;
+}
+
+.contacto-title{
+    margin: 2em 0 .5em 0;
+    color: var(--color7);
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-size: 3rem;
+}
 .contacto{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 10px;
     width: 50%;
 }
 
@@ -490,9 +523,6 @@ footer{
     margin-bottom: 20px;
 }
 
-.ico{
-    width: 50px;
-}
 
 .footer-container-bott{
     display: flex;
@@ -509,29 +539,275 @@ footer{
 
 
 
+/*------------------------------------------*/
+/*----------- RESPONSIVE DEVICES -----------*/
+/*------------------------------------------*/
 
-/*media query TABLET*/
 
-@media screen and (min-width: 768px) and (max-width: 1023px){
+/*------------------------------*/
+/*----------- TABLET -----------*/
+/*------------------------------*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+    /*------------------------------*/
+/*----------- HEADER -----------*/
+/*------------------------------*/
+
+    .checkbtn{
+        display: block;
+    }
+
+    header ul{
+       position: fixed; 
+       width: 100%;
+       height: 100vh;
+       background: var(--color5);
+       top: 80px;
+       z-index: 100;
+       left: -100%; 
+       text-align: center;
+       transition: all .5s;
+    }
+
+    header ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+
+
+  /*------------------------------*/
+/*----------- SLIDER -----------*/
+/*------------------------------*/
+   
+
+
+}
+
+
+.about-title{
+    margin-top: 2rem;
+
+}
+
+
+  /*------------------------------*/
+/*----------- ABOUT -----------*/
+/*------------------------------*/
+
+.about{
+    font-size: 15px;
+}
+
+  /*------------------------------*/
+/*----------- ASI TRABAJAMOS -----------*/
+/*------------------------------*/
+.work-title h2{
+    font-size: 2rem;
+}
+
+.work-p p{
+    font-size: 15px;
+}
+
+.work-image{
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.image:hover{
+    background: var(--color6);
+    transform: scale(1.05);
+}
+
+.contact{
+    flex-direction: column;
+}
+
+.contenerdor{
+    flex-direction: column;
+}
+
+.contacto-title{
+    font-size: 2rem;
+}
+
+.contacto{
+    width: 100%;
+}
+
+.google-map{
+    margin-top: 2em;
+    width: 100%;
+}
+
+.google-map iframe{
+    width: 96%;
+    margin: 0 10px;
+}
+
+
+
+
+
+/*------------------------------*/
+/*----------- PHONE -----------*/
+/*------------------------------*/
+
+@media screen and (max-width: 767px) {
+
+    /*------------------------------*/
+/*----------- HEADER -----------*/
+/*------------------------------*/
+    .checkbtn{
+        display: block;
+    }
+
+    header ul{
+       position: fixed; 
+       width: 100%;
+       height: 100vh;
+       background: var(--color5);
+       top: 80px;
+       z-index: 100;
+       left: -100%; 
+       text-align: center;
+       transition: all .5s;
+    }
+
+    header ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
     
-    /*Header*/
 
-    header{
+    /*------------------------------*/
+/*----------- SLIDER -----------*/
+/*------------------------------*/
+
+    
+
+    .parrafo{
+        font-size:  1rem;
+    }
+
+    .titulo{
+        font-size: 2rem;
+    }
+
+    .btn{
+        width: 8rem;
+    }
+    .btn:hover{
+        
+        cursor: pointer;
+    }
+
+/*------------------------------*/
+/*----------- ABOUT -----------*/
+/*------------------------------*/
+
+    .about{
+        font-size: 15px;
+    }
+
+   /*------------------------------*/
+/*----------- ASI TRABAJAMOS -----------*/
+/*------------------------------*/
+    .work-title h2{
+        font-size: 2rem;
+    }
+
+    .work-p p{
+        font-size: 15px;
+    }
+
+    .work-image{
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .image:hover{
+        background: var(--color6);
+        transform: scale(1.05);
+    }
+
+
+       /*------------------------------*/
+/*----------- CONTACTO -----------*/
+/*------------------------------*/
+
+    .contact{
+        flex-direction: column;
+    }
+
+    .contenerdor{
+        flex-direction: column;
+    }
+
+    .contacto-title{
+        font-size: 2rem;
+    }
+
+    .contacto{
         width: 100%;
     }
 
-    .header-right a, header button{
-        display: inline-block;
-        display: none;
+    .google-map{
+        margin-top: 2em;
+        width: 100%;
     }
 
-    .icon-menu{
-        font-size: 2em;
-        margin-right: 2em;
-        display: inline-block;
-        color: var(--color7);
+    .google-map iframe{
+        width: 96%;
+        margin: 0 10px;
     }
 
-    .change:checked
+
+/*------------------------------*/
+/*----------- FOOTER -----------*/
+/*------------------------------*/
+
+    .footer-logo div{
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+    .footer-container-sup{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left{
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .footer-left h3{
+        font-size: 25px;
+    }
+
 
 }
+    
