@@ -1,0 +1,55 @@
+:root{
+    --color1: #8147f0;
+    --color2: #36236f;
+    --color3: #9124d4;
+    --color4: #b07e5b;
+    --color5: #acb0d0;
+    --color6: #383254;
+    --color7: #fafafa;
+}
+
+@font-face {
+    font-family: martin;
+    src: url(./Fuentes/MARTIN/Martian_Mono/MartianMono-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(./Fuentes/roboto/Roboto/Roboto-Black.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inicioSesion{
+    background-color: var(--color4);
+    position: relative;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    margin-top: 50px;
+    
+}
+
+.ladoIzquierdo{
+    position: relative;
+    background-color: var(--color5);
+    width: 50%;
+    height: 550px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+
