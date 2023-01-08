@@ -18,6 +18,10 @@
     src: url(./Fuentes/roboto/Roboto/Roboto-Black.ttf);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -154,8 +158,8 @@ nav ul li a{
 /*------------------------------*/
 
 .slider{
-    width: 100vw;
-    height: calc(100vh - 80px);
+    width: 100%;
+    height: calc(100% - 80px);
     margin: auto;
     overflow: hidden;
     background: rgb(129,71,240);
@@ -224,12 +228,18 @@ nav ul li a{
     text-shadow: 3px 3px 1px var(--color6);
 }
 
+
+
 .btn{
-    width: 20em;
-    height: 4em;
+    width: 15em;
+    height: 2em;
     margin-top: 2em;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid var(--color7);
+    border-radius: 10px;
+    background-color: var(--color3);
+    padding: 6px 1px;
+    font-family: roboto;
+    color: var(--color7);
 }
 
 .btn:hover{
@@ -270,7 +280,7 @@ nav ul li a{
     align-items: center;
     font-family: martin;
     padding: 1em;
-    width: 100vw;
+    width: 100%;
     background: rgb(129,71,240);
     background: linear-gradient(0deg, rgba(129,71,240,1) 13%, rgba(23,13,52,1) 61%, rgba(54,35,111,1) 98%);
 }
@@ -392,6 +402,7 @@ nav ul li a{
     color: var(--color7);
     text-shadow: black 0.1em 0.1em 0.2em;
     font-size: 3rem;
+    font-family: martin;
 }
 .contacto{
     display: flex;
@@ -451,6 +462,7 @@ nav ul li a{
 
 .google-map iframe{
     border-radius: 10px;
+    width: 90%;
 }
 
 
@@ -551,7 +563,7 @@ footer{
     header ul{
        position: fixed; 
        width: 100%;
-       height: 100vh;
+       height: 100%;
        background: var(--color5);
        top: 80px;
        z-index: 100;
@@ -583,7 +595,9 @@ footer{
 
 
 
-
+.slider ul li img{
+    height: 70vh;
+}
 
     .about-title{
         margin-top: 2rem;
@@ -626,6 +640,7 @@ footer{
 
     .contenerdor{
         flex-direction: column;
+
     }
 
     .contacto-title{
@@ -642,8 +657,10 @@ footer{
     }
 
     .google-map iframe{
-        width: 96%;
-        margin: 0 10px;
+        width: 80%;
+        left: 50%;
+        position: relative;
+        transform: translate(-50%);
     }
 }
 
@@ -666,7 +683,7 @@ footer{
     header ul{
        position: fixed; 
        width: 100%;
-       height: 100vh;
+       height: 100%;
        background: var(--color5);
        top: 80px;
        z-index: 100;
@@ -693,8 +710,13 @@ footer{
     /*------------------------------*/
 /*----------- SLIDER -----------*/
 /*------------------------------*/
-
-    
+    .borde{
+        height: 13em;
+        top: 36%;
+    }
+    .slider ul li img{
+        height: 50vh;
+    }
 
     .parrafo{
         font-size:  1rem;
@@ -706,6 +728,7 @@ footer{
 
     .btn{
         width: 8rem;
+        margin-top: 1em;
     }
     .btn:hover{
         
@@ -734,6 +757,7 @@ footer{
     .work-image{
         flex-direction: column;
         font-size: 15px;
+        gap: 2rem;
     }
 
     .image:hover{
@@ -768,8 +792,15 @@ footer{
     }
 
     .google-map iframe{
-        width: 96%;
-        margin: 0 10px;
+        width: 80%;
+        left: 50%;
+        position: relative;
+        transform: translate(-50%);
+    }
+
+    .button input{
+        font-size: .8em;
+        text-align: center;
     }
 
 
