@@ -143,6 +143,8 @@ nav ul li a{
 .btn-header{
     border-radius: 5px ;
     background-color: var(--color1);
+    font-size: 10px;
+    vertical-align: middle;
 }
 
 

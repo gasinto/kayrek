@@ -1,0 +1,205 @@
+:root{
+    --color1: #8147f0;
+    --color2: #36236f;
+    --color3: #9124d4;
+    --color4: #b07e5b;
+    --color5: #acb0d0;
+    --color6: #383254;
+    --color7: #fafafa;
+}
+
+@font-face {
+    font-family: martin;
+    src: url(./Fuentes/MARTIN/Martian_Mono/MartianMono-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(./Fuentes/roboto/Roboto/Roboto-Black.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inicioSesion{
+    position: relative;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ladoIzquierdo{
+    position: relative;
+    width: 40%;
+    height: 550px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.ladoIzquierdo label{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: roboto;
+    color: var(--color7);
+    cursor: pointer;
+}
+.ladoIzquierdo label:hover{
+    border-bottom: 2px solid var(--color7);
+    padding-bottom: 5px;
+}
+.ladoIzquierdo label a{
+    color: var(--color7);
+}
+.ladoIzquierdo img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.ladoIzquierdo h3{
+    position: absolute;
+    top: 510px;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: roboto;
+    color: var(--color7);
+    font-size: 1.7rem;
+    width: 100%;
+    text-align: center;
+}
+
+.ladoDerecho{
+    position: relative;
+    background-color: var(--color5);
+    width: 50%;
+    height: 550px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color6);
+    font-family: roboto;
+}
+.ladoDerecho h3{
+    font-size: 40px;
+}
+.parrafo-inicio{
+    margin-bottom: 20px;
+}
+.ladoDerecho form{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+}
+.ladoDerecho form input{
+    margin-bottom: 15px;
+    width: 20em;
+    height: 3em;
+    border-radius: 10px;
+    border: none;
+}
+.btn{
+    background-color: var(--color6);
+    color: var(--color7);
+    width: 14em!important;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.ladoDerecho form a{
+    font-size: 12px;
+    margin-top: 2px;
+    color: var(--color7);
+}
+.ladoDerecho form a:hover{
+    color: var(--color6);
+}
+
+
+
+
+/*-----------------------------------------------------*/
+/*RESPONSIVE-------------------------------------------*/
+
+/*---------tablet--------*/
+/*-----------------------*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .ladoIzquierdo h3{
+        font-size: 23px;
+        top: 510px;
+    }
+    .ladoDerecho h3{
+        font-size: 30px;
+    }
+    .ladoDerecho p{
+        font-size: 14px;
+    }
+    .ladoDerecho form label{
+        font-size: 14px;
+    }
+}
+
+
+
+/*---------celular--------*/
+/*------------------------*/
+@media screen and (min-width: 463px) and (max-width: 767px) {
+    .inicioSesion{
+        flex-direction: column;
+        width: 100%;
+    }
+    .ladoIzquierdo{
+        width: 80%;
+    }
+    .ladoIzquierdo img{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+    }
+    .ladoDerecho{
+        width: 80%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
+}
+@media screen and (max-width: 463px) {
+    .inicioSesion{
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .ladoIzquierdo{
+        width: 100%;
+    }
+    .ladoIzquierdo img{
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .ladoDerecho{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        
+    }
+    
+}

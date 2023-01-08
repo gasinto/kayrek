@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./inicio.css">
     <link rel="stylesheet" href="./iniciarSesion.css">
     <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css">
 
@@ -15,13 +14,22 @@
         <div class="ladoIzquierdo">
             <label for="">
                 <i class="fa-solid fa-arrow-left"></i>
-                INICIO
+                <a href="index.html">INICIO</a>
             </label>
-            
+            <img src="./Imagenes/robot.jpg" alt="">
+            <h3>Bienvenido de vuelta!</h3>
         </div>
         <div class="ladoDerecho">
+            <h3>Ingresar a tu cuenta</h3>
+            <p>Te hechamos de menos!</p>
+            <p class="parrafo-inicio">Usa tu usuario y contraseña para iniciar sesión</p>
             <form action="">
-                
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="">
+                <input type="submit" value="Iniciar Sesión" class="btn">
+                <a href="registrarse.html">No tienes cuenta? Crea una!</a>
             </form>
         </div>
     </div>
