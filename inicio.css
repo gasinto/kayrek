@@ -144,7 +144,7 @@ nav ul li a{
     color: var(--color7);
     float: right;
     line-height: 80px;
-    margin-right: 40px;
+    margin-left: 40px;
     cursor: pointer;
     display: none;
 }
@@ -647,6 +647,7 @@ footer{
     .work-image{
         flex-direction: column;
         font-size: 15px;
+        max-width: 400px;
     }
 
     .image:hover{
@@ -788,6 +789,7 @@ footer{
         flex-direction: column;
         font-size: 15px;
         gap: 2rem;
+        max-width: 400px;
     }
 
     .image:hover{
