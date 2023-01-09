@@ -381,7 +381,7 @@ nav ul li a{
 
 .image:hover{
     background: var(--color6);
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .image h3{
