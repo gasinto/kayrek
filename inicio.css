@@ -554,6 +554,25 @@ nav ul li a.active::after {
     font-weight: 700;
 }
 
+.service-badge.proximamente {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-weight: 600;
+}
+
+/* Estilo para servicios deshabilitados (Próximamente) */
+.service-card.proximamente {
+    opacity: 0.7;
+}
+
+.service-card.proximamente .service-features li {
+    color: rgba(255,255,255,0.5);
+}
+
+.service-card.proximamente .service-features li i {
+    color: rgba(255,255,255,0.4);
+}
+
 .service-icon {
     width: 70px;
     height: 70px;
